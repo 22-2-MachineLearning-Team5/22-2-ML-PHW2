@@ -156,16 +156,30 @@ predictor=[['total_rooms', 'total_bedrooms'],
 ## Optimal Clustering
 * Silhouette score in case of ['total_rooms', 'total_bedrooms']
 
+|Model|Finding Option|Standard|MinAbs|MinMax|Robust|
+|-----|-----|-----|-----|-----|-----|
+|K-Means|Best k|4|4|4|4|
+|GMM|Best component|60|60|60|60|
+|CLARANS|Best Silhouette cluster|3|3|3|3|
+|DBSCAN|Best eps|0.05|0.05|0.05|0.05|
+
 |Model|Standard|MinAbs|MinMax|Robust|
 |-----|-----|-----|-----|-----|
 |K-Means|0.516|0.515|0.515|0.515|
 |GMM|0.379|0.379|0.379|0.379|
-|CLARANS|0.875|0.877|0.877|0.873
+|CLARANS|0.875|0.877|0.877|0.873|
 |DBSCAN|-0.3271|0.8973|0.8974|-0.1640|
 
 => **MinMax-DBSCAN** is well clustered
 
 * Silhouette score in case of ['population', 'households']
+
+|Model|Finding Option|Standard|MinAbs|MinMax|Robust|
+|-----|-----|-----|-----|-----|-----|
+|K-Means|Best k|4|4|4|4|
+|GMM|Best component|60|60|60|60|
+|CLARANS|Best Silhouette cluster|3|3|3|3|
+|DBSCAN|Best eps|0.05|0.05|0.05|0.05|
 
 |Model|Standard|MinAbs|MinMax|Robust|
 |-----|-----|-----|-----|-----|
@@ -178,6 +192,13 @@ predictor=[['total_rooms', 'total_bedrooms'],
 
 * Silhouette score in case of ['total_rooms', 'total_bedrooms', 'households']
 
+|Model|Finding Option|Standard|MinAbs|MinMax|Robust|
+|-----|-----|-----|-----|-----|-----|
+|K-Means|Best k|4|4|4|4|
+|GMM|Best component|60|70|80|70|
+|CLARANS|Best Silhouette cluster|3|3|3|3|
+|DBSCAN|Best eps|0.05|0.05|0.05|0.05|
+
 |Model|Standard|MinAbs|MinMax|Robust|
 |-----|-----|-----|-----|-----|
 |K-Means|0.512|0.515|0.515|0.514|
@@ -188,6 +209,13 @@ predictor=[['total_rooms', 'total_bedrooms'],
 => **MinMax-CLARANS** is well clustered
 
 * Silhouette score in case of ['total_rooms', 'total_bedrooms', 'households','population']
+
+|Model|Finding Option|Standard|MinAbs|MinMax|Robust|
+|-----|-----|-----|-----|-----|-----|
+|K-Means|Best k|4|4|4|4|
+|GMM|Best component|80|80|80|80|
+|CLARANS|Best Silhouette cluster|3|3|3|3|
+|DBSCAN|Best eps|0.05|0.05|0.05|0.05|
 
 |Model|Standard|MinAbs|MinMax|Robust|
 |-----|-----|-----|-----|-----|
